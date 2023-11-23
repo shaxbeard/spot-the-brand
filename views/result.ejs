@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-      <img src="<%= img%>" alt="uploaded image" />
-
-      <form action="/" enctype="multipart/form-data" method="post">
+    <img src="<%= img%>" alt="uploaded image" />
+    <!-- <h1><%= brands[0].name %></h1> -->
+    <ul>
+      <% for(let i = 0; i < brands.length; i++) { %>
+      <li>
+        <%=brands[i].name%> <%=brands[i].confidence.toFixed(2)%> confidence
+      </li>
+      <% } %>
+    </ul>
+    <form action="/" enctype="multipart/form-data" method="post">
       <input type="file" name="file-to-upload" />
       <input type="submit" value="Upload" />
     </form>
