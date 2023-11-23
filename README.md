@@ -21,3 +21,7 @@
 # Run
 
 `npm start`
+
+# Project Description
+
+This app uses a Microsoft Azure Computer Vision machine learning api to detect brands in an image. The app currently just displays the brand name(s) on screen, but it could be modified into any workflow where images are uploaded and then analyzed for their brand content.
